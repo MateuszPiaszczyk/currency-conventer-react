@@ -1,0 +1,77 @@
+import "./style.css"
+import { currencies } from "../currencies"
+import { Result } from "./Result"
+import { useState } from "react"
+import { Container } from "../Container"
+
+export const Form = ({ calculateResult, result }) => {
+    const [amount, setAmount] = useState("");
+    const [currency, setCurrency] = useState(currencies[0].shortName);
+
+    const onFormSubmit = (e) => {
+        e.preventDefault();
+        calculateResult(amount, currency);
+    }
+    return (
+
+        <Container>
+            <h1 className="heading">
+                PiaszczykStudio | Currency Conventer app ver 1.1
+            </h1>
+            <form className="form" onSubmit={onFormSubmit} />
+
+            <legend className="form__legend">
+                Przelicznik walut
+            </legend>
+            <p>
+                <label>
+                    <span className="form__labelText">
+                        Kwota w zł
+                        <span
+                            className="form__field form__field--important">
+                            *
+                        </span>:
+                    </span>
+                    <input
+                        value={amount}
+                        onChange={({ target }) => setAmount(target.value)}
+                        placeholder="Wpisz kwotę w zł"
+                        className="form__field"
+                        min="0"
+                        type="number"
+                        required
+                        step="0.01" />
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span className="form__labelText">
+                        Waluta
+                    </span>
+                    <select
+                        className="form__field"
+                        value={currency}
+                        onChange={({ target }) => setCurrency(target.value)}
+                    >
+                        {currencies.map((currency => (
+                            <option
+                                key={currency.shortName}
+                                value={currency.shortName}
+                                 >
+                                {currency.flagIcon} - {currency.shortName} - {currency.fullName}
+                            </option>
+                        )))};
+                    </select>
+                </label>
+            </p>
+            
+                <button className="form__button">Przelicz Walutę</button>
+           
+            <p className="form__info"> Kursy Walut na podstawie danych z Tabeli nr 008/A/NBP/2023 z dnia 2023-01-12 </p>
+            <Result result={result} />
+
+            <form />
+        </Container>
+    );
+};
+
