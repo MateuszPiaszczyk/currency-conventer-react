@@ -11,18 +11,18 @@ function App() {
       .find(({ shortName }) => shortName === currency).rate;
 
     setResult({
-      sourceAmount: +amount,
+      sourceAmount: + amount,
       targetResult: amount / rate,
-      currency,
-    });
+      currency
+    })
   }
   return (
-    <div className="app">
+    
     <Form
-      result={result}
       calculateResult={calculateResult}
+      result={result}
       />
-    </div>
+   
 
   );
 }
