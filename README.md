@@ -7,15 +7,15 @@ PL: Przelicznik walut React pozwalający przeliczyc kurs złotówki na dolar ama
 
 # Technologies and practices used / Technologie i praktyki
 
-1.BEM
-2.CSS
-3.JS
-4.HTML
-5.NORMALIZE
-6.ES6 + feutures
-7.React
+1. BEM
+2. CSS
+3. JS
+4. HTML
+5. NORMALIZE
+6. ES6 + feutures
+7. React
 
-#Demo:
+# Demo:
 https://mateuszpiaszczyk.github.io/currency-conventer-react/
 
 # Getting Started with Create React App
