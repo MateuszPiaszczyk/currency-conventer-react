@@ -17,14 +17,11 @@ function App() {
     })
   }
   return (
-    
     <Form
       calculateResult={calculateResult}
       result={result}
       />
-   
-
   );
-}
+};
 
 export default App;

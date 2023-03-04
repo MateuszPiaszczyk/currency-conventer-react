@@ -1,11 +1,11 @@
 import "./style.css"
-import { currencies } from "../currencies"
-import { Result } from "./Result"
-import { useState } from "react"
 import { Container } from "../Container"
+import { currencies } from "../currencies"
+import { useState } from "react"
+import { Result } from "./Result"
 
 export const Form = ({ calculateResult, result }) => {
-    const [amount, setAmount] = useState("");
+    const [amount, setAmount] = useState(" ");
     const [currency, setCurrency] = useState(currencies[0].shortName);
 
     const onSelectChange = ({ target }) => setCurrency(target.value);
@@ -18,7 +18,7 @@ export const Form = ({ calculateResult, result }) => {
 
         <Container>
 
-            <form className="form" onSubmit={onSubmit} />
+            <form className="form" onSubmit={onSubmit} >
 
             <fieldset class="form__fieldset">
                 <h1 className="heading">
@@ -41,7 +41,7 @@ export const Form = ({ calculateResult, result }) => {
                             onChange={({ target }) => setAmount(target.value)}
                             placeholder="Wpisz kwotę w zł"
                             className="form__field"
-                            min="0"
+                            min="0.01"
                             type="number"
                             required
                             autoFocus
@@ -75,9 +75,9 @@ export const Form = ({ calculateResult, result }) => {
                 </button>
 
                 <p className="form__info"> Kursy Walut na podstawie danych z Tabeli nr 008/A/NBP/2023 z dnia 2023-01-12 </p>
-                <Result result={result} />
+                <Result result={result}/>
             </fieldset>
-            <form />
+            </form>
         </Container>
     );
 };
