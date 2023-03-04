@@ -22,5 +22,5 @@ export const currencies = [
         shortName: "GBP",
         fullName: "Funt Szterling",
         rate: 5.2676
-    },
+    }
 ];
