@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Result } from "./Result";
 
 export const Form = ({ calculateResult, result }) => {
-    const [amount, setAmount] = useState(" ");
+    const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState(currencies[0].shortName);
 
     const onSelectChange = ({ target }) => setCurrency(target.value);
