@@ -1,31 +1,29 @@
-import './app.css'
-import { currencies } from './currencies';
-import { Form } from './Form';
-import { Clock } from './Clock';
-import { useState } from 'react';
+import { currencies } from "./currencies";
+import { Form } from "./Form";
+import { Clock } from "./Clock";
+import { useState } from "react";
+import { Wrapper } from "./styled";
 
 function App() {
   const [result, setResult] = useState(null);
 
   const calculateResult = (currency, amount) => {
-    const rate = currencies
-      .find(({ shortName }) => shortName === currency).rate;
+    const rate = currencies.find(
+      ({ shortName }) => shortName === currency
+    ).rate;
 
     setResult({
-      sourceAmount: + amount,
+      sourceAmount: +amount,
       targetResult: amount / rate,
-      currency
-    })
-  }
+      currency,
+    });
+  };
   return (
-    <div className='app'>
+    <Wrapper>
       <Clock />
-      <Form
-        calculateResult={calculateResult}
-        result={result}
-      />
-    </div>
+      <Form calculateResult={calculateResult} result={result} />
+    </Wrapper>
   );
-};
+}
 
 export default App;

@@ -1,32 +1,19 @@
-import { useEffect, useState } from "react";
-import "./style.css";
+import { Wrapper } from "./styled";
+import { useCurrentDate } from "./useCurrentDate";
+
+const formatDate = (date) =>
+  date.toLocaleString(undefined, {
+    weekday: "long",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    day: "numeric",
+    year: "numeric",
+    month: "long",
+  });
 
 export const Clock = () => {
-    const [date, setDate] = useState(new Date());
+  const date = useCurrentDate();
 
-    useEffect (() => {
-        const intervalId = setInterval(() => {
-            setDate(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, []);
-
-    return (
-        <div className="clock">
-            Dzisiaj jest
-            {" "}
-            {date.toLocaleString(undefined, {
-                weekday: "long",
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit",
-                day: "numeric",
-                year: "numeric",
-                month: "long"
-            })}
-        </div>
-    );
+  return <Wrapper>Dzisiaj jest {formatDate(date)}</Wrapper>;
 };
