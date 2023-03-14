@@ -28,3 +28,23 @@ export const Info = styled.p`
     text-align: center;
     font-size: 12px;
 `;
+
+export const Button = styled.button`
+    font-family: 'Roboto' sans-serif;
+    width: 100%;
+    padding: 15px;
+    background-color: ${({ theme }) => theme.color.curiousBlue};
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      filter: brightness(110%);
+    }
+
+    &:active {
+      filter: brightness(120%);
+    }
+`;

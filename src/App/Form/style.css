@@ -23,15 +23,7 @@
 }
 
 .form__button {
-    font-family: 'Roboto'sans-serif;
-    width: 100%;
-    padding: 15px;
-    background-color: #1BAAE3;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    text-transform: uppercase;
+    
 
 }
 

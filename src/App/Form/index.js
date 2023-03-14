@@ -1,7 +1,7 @@
 import { currencies } from "../currencies";
 import { useState } from "react";
 import { Result } from "./Result";
-import { LabelText, Field, Info } from "./styled";
+import { LabelText, Field, Info, Button } from "./styled";
 
 export const Form = ({ calculateResult, result }) => {
   const [amount, setAmount] = useState("");
@@ -56,8 +56,7 @@ export const Form = ({ calculateResult, result }) => {
             </Field>
           </label>
         
-
-        <button className="form__button">Przelicz Walutę</button>
+        <Button>Przelicz Walutę</Button>
 
         <Info>
           Kursy Walut na podstawie danych z Tabeli nr 008/A/NBP/2023 z dnia
