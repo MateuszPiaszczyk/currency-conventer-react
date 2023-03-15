@@ -17,12 +17,13 @@ Before:
 7. React
 
 Current:
-3. JS
-4. HTML
-5. NORMALIZE
-6. ES6 + feutures
-7. React
-8. Styled Components
+
+1. JS
+2. HTML
+3. NORMALIZE
+4. ES6 + feutures
+5. React
+6. Styled Components
 
 # Demo:
 https://mateuszpiaszczyk.github.io/currency-conventer-react/
