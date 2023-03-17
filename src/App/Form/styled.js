@@ -21,6 +21,7 @@ export const Fieldset = styled.fieldset`
   border: 2px solid ${({ theme }) => theme.color.clairvoyant};
   border-style: none;
 `;
+
 export const Field = styled.input`
   width: 100%;
   max-width: 620px;
@@ -33,6 +34,7 @@ export const Header = styled.h1`
   color: ${({ theme }) => theme.color.black};
   text-align: center;
 `;
+
 export const Info = styled.p`
   text-align: center;
   font-size: 12px;
@@ -59,6 +61,7 @@ export const Button = styled.button`
     transform: scale(0.95);
   }
 `;
+
 export const Legend = styled.legend`
   margin: 0 auto;
   background-color: ${({ theme }) => theme.color.clairvoyant};

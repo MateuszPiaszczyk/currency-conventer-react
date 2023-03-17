@@ -22,6 +22,7 @@ export const Form = ({ calculateResult, result }) => {
     calculateResult(currency, amount);
   };
   return (
+
     <form onSubmit={onSubmit}>
       <Fieldset>
         <Header>Currency Conventer React app</Header>
@@ -33,6 +34,7 @@ export const Form = ({ calculateResult, result }) => {
               <LabelText important>*</LabelText>:
             </LabelText>
             <Field
+              as="select"
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
               placeholder="Wpisz kwotę w zł"
@@ -54,7 +56,7 @@ export const Form = ({ calculateResult, result }) => {
                 {currency.flagIcon} - {currency.shortName} - {currency.fullName}
               </option>
             ))}
-            ;
+            
           </Field>
         </label>
 
