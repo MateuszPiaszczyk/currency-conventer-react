@@ -8,7 +8,7 @@ import {
   Button,
   Legend,
   Header,
-  Fieldset,
+  Fieldset
 } from "./styled";
 
 export const Form = ({ calculateResult, result }) => {
@@ -30,11 +30,9 @@ export const Form = ({ calculateResult, result }) => {
         <p>
           <label>
             <LabelText>
-              Kwota w zł
-              <LabelText important>*</LabelText>:
+              Kwota w zł <span important="true">*</span>:
             </LabelText>
             <Field
-              as="select"
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
               placeholder="Wpisz kwotę w zł"
@@ -50,18 +48,22 @@ export const Form = ({ calculateResult, result }) => {
 
         <label>
           <LabelText>Waluta</LabelText>
-          <Field value={currency} onChange={onSelectChange}>
+          <Field 
+          as="select"
+          value={currency} 
+          onChange={onSelectChange} 
+          >
             {currencies.map((currency) => (
               <option key={currency.shortName} value={currency.shortName}>
                 {currency.flagIcon} - {currency.shortName} - {currency.fullName}
               </option>
             ))}
-            
-          </Field>
+            </Field>
+         
         </label>
-
+              <p>
         <Button>Przelicz Walutę</Button>
-
+</p>
         <Info>
           Kursy Walut na podstawie danych z Tabeli nr 008/A/NBP/2023 z dnia
           2023-01-12

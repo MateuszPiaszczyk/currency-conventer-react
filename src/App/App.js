@@ -24,6 +24,6 @@ function App() {
       <Form calculateResult={calculateResult} result={result} />
     </Wrapper>
   );
-}
+};
 
 export default App;
