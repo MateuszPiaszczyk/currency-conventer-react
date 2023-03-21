@@ -43,14 +43,18 @@ export const Form = () => {
       <Fieldset>
         <Header>Currency Conventer React app</Header>
         <Legend>Przelicznik walut</Legend>
-        {ratesData.state === "success" ? (
+        {ratesData.state === "loading"
+         ? (
           <Loading>
             ENG: Loading data from the European Central Bank. Please be patient.
             <br />
             PL: Ładuje dane z Europjskiego Banku Centralnego. Proszę o
             cierpliwość
           </Loading>
-        ) : ratesData.state === "error" ? (
+        ) 
+        : ( 
+          ratesData.state === "error" 
+          ? ( 
           <Failure>
             ENG: Something went wrong.. Please check your internet connection If
             your connection is stable, please try again later.
@@ -58,13 +62,15 @@ export const Form = () => {
             PL: Coś poszło nie tak Proszę sprawdzić połączenie z internetem,
             jeśli jest wporządku. Spróbój ponownie pozniej.
           </Failure>
-        ) : (
+        ) 
+        : (
           <>
             <p>
-              <label>
+              <label>           
                 <LabelText>
-                  Kwota w zł <span important="true">*</span>:
+                  Kwota w zł <span important="important">*</span>:
                 </LabelText>
+               
                 <Field
                   value={amount}
                   onChange={({ target }) => setAmount(target.value)}
@@ -86,7 +92,10 @@ export const Form = () => {
               onChange={onSelectChange}
               >
                 {!!ratesData.rates && Object.keys(ratesData.rates).map((currency) => (
-                  <option key={currency} value={currency}>
+                  <option 
+                  key={currency} 
+                  value={currency}
+                  >
                     {currency}
                   </option>
                 ))}
@@ -103,7 +112,7 @@ export const Form = () => {
             </Info>
             <Result result={result} />
           </>
-        )}
+        ))}
       </Fieldset>
     </form>
   );
