@@ -9,12 +9,12 @@ export const useRatesData = () => {
     useEffect(() => {
         const getRates = async () => {
             try {
-                const currenciesGetApi = "https://api.exchangerate.host/latest?base=PLN";
-                const response = await axios.get(currenciesGetApi);
+                const CURRENCIES_API_URL = "https://api.exchangerate.host/latest?base=PLN";
+                const { data: { date, rates } } = await axios.get(CURRENCIES_API_URL);
 
                 setRatesData({
-                    date: response.data.date,
-                    rates: response.data.rates,
+                    date,
+                    rates,
                     status: "success",
                 });
             } catch (error) {
