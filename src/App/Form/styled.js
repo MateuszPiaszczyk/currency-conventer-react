@@ -40,7 +40,7 @@ export const Loading = styled.p`
 `;
 
 export const Failure = styled.p`
-  color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.crimson};
 `;
 
 export const Info = styled.p`
