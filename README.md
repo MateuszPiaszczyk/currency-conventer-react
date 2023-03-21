@@ -24,6 +24,8 @@ Current:
 4. ES6 + feutures
 5. React
 6. Styled Components
+7. AXIOS
+8. open API USED
 
 # Demo:
 https://mateuszpiaszczyk.github.io/currency-conventer-react/
