@@ -7,14 +7,11 @@ export const LabelText = styled.span`
   border-radius: 15px;
   padding: 0;
 
-  ${({ important }) =>
-    important &&
-    css`
-      color: ${({ theme }) => theme.color.crimson};
-      border: none;
-      padding: 0;
-    `}
 `;
+export const RequiredSign = styled.span`
+   color: ${({ theme }) => theme.color.crimson};
+   font-weight: 700;
+`
 
 export const Fieldset = styled.fieldset`
   border-radius: 15px;

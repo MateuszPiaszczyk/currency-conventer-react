@@ -10,6 +10,7 @@ import {
   Fieldset,
   Loading,
   Failure,
+  RequiredSign,
 } from "./styled";
 import { useRatesData } from "./Result/useRatesData";
 
@@ -25,7 +26,7 @@ export const Form = () => {
 
     setResult({
       sourceAmount: +amount,
-      targetResult: amount / rate,
+      targetResult: amount * rate,
       currency,
     });
   };
@@ -35,6 +36,7 @@ export const Form = () => {
     calculateResult(currency, amount);
   };
 
+  const onInputChange = ({ target }) => setAmount(target.value);
   const onSelectChange = ({ target }) => setCurrency(target.value);
 
   return (
@@ -43,7 +45,7 @@ export const Form = () => {
       <Fieldset>
         <Header>Currency Conventer React app</Header>
         <Legend>Przelicznik walut</Legend>
-        {ratesData.state === "loading"
+        {ratesData.status === "loading"
          ? (
           <Loading>
             ENG: Loading data from the European Central Bank. Please be patient.
@@ -53,7 +55,7 @@ export const Form = () => {
           </Loading>
         ) 
         : ( 
-          ratesData.state === "error" 
+          ratesData.status === "error" 
           ? ( 
           <Failure>
             ENG: Something went wrong.. Please check your internet connection If
@@ -68,12 +70,12 @@ export const Form = () => {
             <p>
               <label>           
                 <LabelText>
-                  Kwota w zł <span important="important">*</span>:
+                  Kwota w zł <RequiredSign>*</RequiredSign>:
                 </LabelText>
                
                 <Field
                   value={amount}
-                  onChange={({ target }) => setAmount(target.value)}
+                  onChange={onInputChange}
                   placeholder="Wpisz kwotę w zł"
                   min="0.01"
                   type="number"
