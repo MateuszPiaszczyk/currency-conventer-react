@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const LabelText = styled.span`
   display: inline-block;
@@ -75,4 +75,46 @@ export const Legend = styled.legend`
   border-radius: 15px;
   font-weight: normal;
   font-size: 24px;
+`;
+
+export const Preloader = styled.div`
+    height: 4px;
+    background: ${({ theme }) => theme.color.alto};
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: ${({ theme }) => theme.color.curiousBlue};
+      height: 100%;
+      width: 0%;
+      left: -25%;
+      animation: preloader 2s infinite linear;
+    }
+    
+  @keyframes preloader {
+    0% {
+      left: -25%;
+    }
+    50% {
+      width: 25%;
+      background: $color_warning;
+    }
+    70% {
+      width: 50%;
+    }
+    80% {
+      left: 50%;
+    }
+    95% {
+      left: 90%;
+    }
+    100% {
+      left: 120%;
+      width: 100%;
+      background: ${({ theme }) => theme.color.clairvoyant};
+    }
+  }
 `;

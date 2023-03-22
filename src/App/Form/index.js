@@ -11,6 +11,7 @@ import {
   Loading,
   Failure,
   RequiredSign,
+  Preloader,
 } from "./styled";
 import { useRatesData } from "./Result/useRatesData";
 
@@ -47,12 +48,15 @@ export const Form = () => {
         <Legend>Przelicznik walut</Legend>
         {ratesData.status === "loading"
          ? (
+          <>
           <Loading>
             ENG: Loading data from the European Central Bank. Please be patient.
             <br />
             PL: Ładuje dane z Europjskiego Banku Centralnego. Proszę o
             cierpliwość
           </Loading>
+          <Preloader></Preloader>
+          </>
         ) 
         : ( 
           ratesData.status === "error" 
