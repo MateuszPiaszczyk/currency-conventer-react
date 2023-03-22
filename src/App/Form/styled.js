@@ -100,10 +100,11 @@ export const Preloader = styled.div`
     }
     50% {
       width: 25%;
-      background: $color_warning;
+      background: ${({ theme }) => theme.color.curiousBlue};
     }
     70% {
       width: 50%;
+      background: ${({ theme }) => theme.color.curiousBlue};
     }
     80% {
       left: 50%;
