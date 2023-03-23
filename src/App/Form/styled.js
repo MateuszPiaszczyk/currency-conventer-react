@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const LabelText = styled.span`
   display: inline-block;
@@ -77,6 +77,36 @@ export const Legend = styled.legend`
   font-size: 24px;
 `;
 
+const preloader = keyframes`
+  0% {
+    left: -25%;
+  }
+  50% {
+    width: 25%;
+    background: ${({ theme }) => theme.color.curiousBlue};
+  }
+  70% {
+    width: 50%;
+    background: ${({ theme }) => theme.color.curiousBlue};
+  }
+  80% {
+    left: 50%;
+  }
+  95% {
+    left: 90%;
+  }
+  100% {
+    left: 120%;
+    width: 100%;
+    background: ${({ theme }) => theme.color.clairvoyant};
+  }
+`;
+
+
+
+
+
+
 export const Preloader = styled.div`
     height: 4px;
     background: ${({ theme }) => theme.color.alto};
@@ -91,31 +121,7 @@ export const Preloader = styled.div`
       height: 100%;
       width: 0%;
       left: -25%;
-      animation: preloader 2s infinite linear;
+      animation: ${preloader} 2s infinite linear;
     }
-    
-  @keyframes preloader {
-    0% {
-      left: -25%;
-    }
-    50% {
-      width: 25%;
-      background: ${({ theme }) => theme.color.curiousBlue};
-    }
-    70% {
-      width: 50%;
-      background: ${({ theme }) => theme.color.curiousBlue};
-    }
-    80% {
-      left: 50%;
-    }
-    95% {
-      left: 90%;
-    }
-    100% {
-      left: 120%;
-      width: 100%;
-      background: ${({ theme }) => theme.color.clairvoyant};
-    }
-  }
-`;
+    `;   
+
