@@ -102,6 +102,14 @@ const preloader = keyframes`
   }
 `;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 7986fb3f75e48a96a0657897d4dec340d177abb4
 export const Preloader = styled.div`
     height: 4px;
     background: ${({ theme }) => theme.color.alto};
