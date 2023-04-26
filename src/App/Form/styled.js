@@ -6,12 +6,12 @@ export const LabelText = styled.span`
   max-width: 200px;
   border-radius: 15px;
   padding: 0;
-
 `;
+
 export const RequiredSign = styled.span`
-   color: ${({ theme }) => theme.color.crimson};
-   font-weight: 700;
-`
+  color: ${({ theme }) => theme.color.crimson};
+  font-weight: 700;
+`;
 
 export const Fieldset = styled.fieldset`
   border-radius: 15px;
@@ -101,30 +101,20 @@ const preloader = keyframes`
     background: ${({ theme }) => theme.color.clairvoyant};
   }
 `;
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> 7986fb3f75e48a96a0657897d4dec340d177abb4
 export const Preloader = styled.div`
-    height: 4px;
-    background: ${({ theme }) => theme.color.alto};
-    position: relative;
-    overflow: hidden;
+  height: 4px;
+  background: ${({ theme }) => theme.color.alto};
+  position: relative;
+  overflow: hidden;
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      background: ${({ theme }) => theme.color.curiousBlue};
-      height: 100%;
-      width: 0%;
-      left: -25%;
-      animation: ${preloader} 2s infinite linear;
-    }
-    `;   
-
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: ${({ theme }) => theme.color.curiousBlue};
+    height: 100%;
+    width: 0%;
+    left: -25%;
+    animation: ${preloader} 2s infinite linear;
+  }
+`;
