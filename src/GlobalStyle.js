@@ -20,5 +20,4 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
-
 `;

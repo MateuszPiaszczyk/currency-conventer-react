@@ -20,7 +20,6 @@ export const Form = () => {
   const [currency, setCurrency] = useState("EUR");
   const [result, setResult] = useState(null);
   const ratesData = useRatesData("");
-  
 
   const calculateResult = (currency, amount) => {
     const rate = ratesData.rates[currency];
@@ -41,26 +40,22 @@ export const Form = () => {
   const onSelectChange = ({ target }) => setCurrency(target.value);
 
   return (
-
     <form onSubmit={onSubmit}>
       <Fieldset>
         <Header>Currency Conventer React app</Header>
         <Legend>Przelicznik walut</Legend>
-        {ratesData.status === "loading"
-         ? (
+        {ratesData.status === "loading" ? (
           <>
-          <Loading>
-            ENG: Loading data from the European Central Bank. Please be patient.
-            <br />
-            PL: Ładuje dane z Europjskiego Banku Centralnego. Proszę o
-            cierpliwość
-          </Loading>
-          <Preloader></Preloader>
+            <Loading>
+              ENG: Loading data from the European Central Bank. Please be
+              patient.
+              <br />
+              PL: Ładuje dane z Europjskiego Banku Centralnego. Proszę o
+              cierpliwość
+            </Loading>
+            <Preloader></Preloader>
           </>
-        ) 
-        : ( 
-          ratesData.status === "error" 
-          ? ( 
+        ) : ratesData.status === "error" ? (
           <Failure>
             ENG: Something went wrong.. Please check your internet connection If
             your connection is stable, please try again later.
@@ -68,15 +63,14 @@ export const Form = () => {
             PL: Coś poszło nie tak Proszę sprawdzić połączenie z internetem,
             jeśli jest wporządku. Spróbój ponownie pozniej.
           </Failure>
-        ) 
-        : (
+        ) : (
           <>
             <p>
-              <label>           
+              <label>
                 <LabelText>
                   Kwota w zł <RequiredSign>*</RequiredSign>:
                 </LabelText>
-               
+
                 <Field
                   value={amount}
                   onChange={onInputChange}
@@ -92,16 +86,9 @@ export const Form = () => {
 
             <label>
               <LabelText>Waluta</LabelText>
-              <Field 
-              as="select" 
-              value={currency} 
-              onChange={onSelectChange}
-              >
+              <Field as="select" value={currency} onChange={onSelectChange}>
                 {Object.keys(ratesData.rates).map((currency) => (
-                  <option 
-                  key={currency} 
-                  value={currency}
-                  >
+                  <option key={currency} value={currency}>
                     {currency}
                   </option>
                 ))}
@@ -118,7 +105,7 @@ export const Form = () => {
             </Info>
             <Result result={result} />
           </>
-        ))}
+        )}
       </Fieldset>
     </form>
   );
