@@ -2,7 +2,7 @@ import { Form } from "./Form";
 import { Clock } from "./Clock";
 import { Wrapper } from "./styled";
 
-function App() {
+export const currencyConventerApp = () => {
   return (
     <Wrapper>
       <Clock />
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+
