@@ -7,7 +7,7 @@ import { Container } from "../../common/Header/styled";
 export const CurrencyConventerPage = () => {
   return (
     <Container>
-      <Header title="💸 Przelicznik Walut/Currency Conventer" />
+      <Header title="💸 Przelicznik Walut" />
       <Wrapper>
         <Clock />
         <Form />
