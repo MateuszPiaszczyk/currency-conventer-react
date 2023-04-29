@@ -6,7 +6,7 @@ import { Container } from "../../common/Header/styled";
 
 export const AuthorPage = () => (
   <Container>
-    <Header title="o Autorze" />
+    <Header title="👨🏻‍💻 o Autorze" />
     <Section
       title="Mateusz Piaszczyk"
       body={
