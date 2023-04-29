@@ -1,14 +1,17 @@
 import { Form } from "./Form";
 import { Clock } from "./Clock";
 import { Wrapper } from "./styled";
+import { Header } from "../../../common/Header";
+import { Container } from "../../../common/Header/styled";
 
-export const currencyConventerApp = () => {
+export const CurrencyConventerPage = () => {
   return (
-    <Wrapper>
-      <Clock />
-      <Form />
-    </Wrapper>
+    <Container>
+      <Header title="Przelicznik Walut" />
+      <Wrapper>
+        <Clock />
+        <Form />
+      </Wrapper>
+    </Container>
   );
-}
-
-
+};

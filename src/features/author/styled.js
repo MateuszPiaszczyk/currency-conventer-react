@@ -1,15 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-`; 
-
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: 20px;
+  
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
   }

@@ -21,23 +21,19 @@ export const Fieldset = styled.fieldset`
 
 export const Field = styled.input`
   width: 100%;
-  max-width: 620px;
   border: 1px solid ${({ theme }) => theme.color.alto};
   border-radius: 15px;
   padding: 15px;
 `;
 
-export const Header = styled.h1`
+export const Loading = styled.p`
   color: ${({ theme }) => theme.color.black};
   text-align: center;
 `;
 
-export const Loading = styled.p`
-  color: ${({ theme }) => theme.color.black};
-`;
-
 export const Failure = styled.p`
   color: ${({ theme }) => theme.color.crimson};
+  text-align: center;
 `;
 
 export const Info = styled.p`

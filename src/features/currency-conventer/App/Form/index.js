@@ -6,7 +6,6 @@ import {
   Info,
   Button,
   Legend,
-  Header,
   Fieldset,
   Loading,
   Failure,
@@ -42,7 +41,6 @@ export const Form = () => {
   return (
     <form onSubmit={onSubmit}>
       <Fieldset>
-        <Header>Currency Conventer React app</Header>
         <Legend>Przelicznik walut</Legend>
         {ratesData.status === "loading" ? (
           <>

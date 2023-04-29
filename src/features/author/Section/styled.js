@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-`;
-
 export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0 0 4px ${({ theme }) => theme.color.alto};
   margin: 10px 0;
+  border-radius: 15px;
+  border: 2px solid ${({ theme }) => theme.color.clairvoyant};
+  box-shadow: 5px 0px 25px 0px ${({ theme }) => theme.color.clairvoyant};
 `;
 
 export const Header = styled.header`

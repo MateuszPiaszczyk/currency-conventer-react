@@ -1,17 +1,10 @@
-import Header from "./Header";
 import Section from "./Section";
-import {
-  Container,
-  Description,
-  Image,
-  Strong,
-  Title,
-  Wrapper,
-  Youcode,
-} from "./styled";
+import { Description, Image, Strong, Title, Wrapper, Youcode } from "./styled";
 import image from "./assets/profile.webp";
+import { Header } from "../../common/Header";
+import { Container } from "../../common/Header/styled";
 
-export default () => (
+export const AuthorPage = () => (
   <Container>
     <Header title="o Autorze" />
     <Section
