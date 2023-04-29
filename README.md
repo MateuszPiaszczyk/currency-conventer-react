@@ -1,5 +1,6 @@
 # currency-conventer with React app and Styled Components
-![Currency Conventer app](https://piaszczykstudio.pl/wp-content/uploads/2023/03/conv31.gif)
+![Currency Conventer app](https://piaszczykstudio.pl/wp-content/uploads/2023/04/Zrzut-ekranu-2023-04-29-o-16.27.13.png)
+![Currency Conventer demo](https://piaszczykstudio.pl/wp-content/uploads/2023/03/conv31.gif)
 
 # WORK IN PROGRESS
 # Description / Opis
@@ -8,26 +9,7 @@ ENG: Currency converter React that allows you to convert PLN exchange rate to th
 PL: Przelicznik walut React pozwalający przeliczyc kurs złotówki na dolar amarykański, dolar kanadyjski, funt szterling, euro. Aplikacja stworzona w ramach pracy domowej kursu #youcode ;)
 
 # Technologies and practices used / Technologie i praktyki
-
-Before:
-1. BEM
-2. CSS
-3. JS
-4. HTML
-5. NORMALIZE
-6. ES6 + feutures
-7. React
-
-Current:
-
-1. JS
-2. HTML
-3. NORMALIZE
-4. ES6 + feutures
-5. React
-6. Styled Components
-7. AXIOS
-8. open API USED
+`JS ES+ feutures` `Normalize` `React` `React-Router` `Styled-components` `AXIOS` `open API`
 
 # Demo:
 https://mateuszpiaszczyk.github.io/currency-conventer-react/
