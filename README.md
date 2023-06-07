@@ -1,4 +1,4 @@
-# currency-conventer with React app and Styled Components
+# currency-conventer with React
 ![Currency Conventer app](https://piaszczykstudio.pl/wp-content/uploads/2023/04/Zrzut-ekranu-2023-04-29-o-16.27.13.png)
 ![Currency Conventer demo](https://piaszczykstudio.pl/wp-content/uploads/2023/03/conv31.gif)
 
