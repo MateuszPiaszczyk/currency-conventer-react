@@ -3,6 +3,12 @@
 ![Currency Conventer demo](https://piaszczykstudio.pl/wp-content/uploads/2023/03/conv31.gif)
 
 # WORK IN PROGRESS
+planned updates:
+
+1. addition of country flags downloaded from API
+
+2. round-trip currency exchange
+
 # Description / Opis
 ENG: Currency converter React that allows you to convert PLN exchange rate to the USD, CAD, GBP, EUR. Application created as part of the homework of the #youcode course ;)
 
