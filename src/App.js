@@ -7,7 +7,7 @@ import { toAuthor, toCurrencyConventer } from "./routes";
 
 export const App = () => (
   <HashRouter>
-   <Normalize />
+    <Normalize />
     <Navigation />
     <Switch>
       <Route path={toCurrencyConventer()}>

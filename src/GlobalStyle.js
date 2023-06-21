@@ -15,6 +15,5 @@ body {
   background-repeat: no-repeat; 
   align-items: center;
   justify-content: center;
-
 }
 `;
