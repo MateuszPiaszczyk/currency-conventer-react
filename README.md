@@ -9,6 +9,9 @@ planned updates:
 
 2. round-trip currency exchange
 
+3. switching to TypeScript
+
+
 # Description / Opis
 ENG: Currency converter React that allows you to convert PLN exchange rate to the USD, CAD, GBP, EUR. Application created as part of the homework of the #youcode course ;)
 
